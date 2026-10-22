@@ -1,0 +1,48 @@
+name: Sync LeetCode
+
+on:
+  schedule:
+    - cron: "0 3 * * *" # daily at 03:00 UTC
+  workflow_dispatch:
+    inputs:
+      full_sync:
+        description: "Walk the entire submission history"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: leetcode-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync submissions
+        env:
+          LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
+          LEETCODE_CSRF_TOKEN: ${{ secrets.LEETCODE_CSRF_TOKEN }}
+          LEETCODE_FULL_SYNC: ${{ inputs.full_sync && '1' || '0' }}
+        run: python scripts/sync_leetcode.py
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          NEW=$(git diff --cached --name-only --diff-filter=A | grep -E '^(easy|medium|hard)/' | wc -l)
+          git commit -m "Sync LeetCode: ${NEW} new files ($(date -u +%Y-%m-%d))"
+          git push
