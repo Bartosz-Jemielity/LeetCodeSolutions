@@ -1,0 +1,138 @@
+{
+  "lastTimestamp": 1792570960,
+  "problems": {
+    "add-two-numbers": {
+      "difficulty": "Medium",
+      "id": "2",
+      "slug": "add-two-numbers",
+      "solutions": {
+        "c": {
+          "lang": "c",
+          "langName": "C",
+          "memory": "12.7 MB",
+          "memoryPct": 99.8097,
+          "path": "medium/0002-add-two-numbers/solution.c",
+          "runtime": "2 ms",
+          "runtimePct": 43.5772,
+          "submissionId": 1557283725,
+          "timestamp": 1740671421
+        }
+      },
+      "title": "Add Two Numbers"
+    },
+    "kth-largest-sum-in-a-binary-tree": {
+      "difficulty": "Medium",
+      "id": "2583",
+      "slug": "kth-largest-sum-in-a-binary-tree",
+      "solutions": {
+        "cpp": {
+          "lang": "cpp",
+          "langName": "C++",
+          "memory": "157.5 MB",
+          "memoryPct": 100.0,
+          "path": "medium/2583-kth-largest-sum-in-a-binary-tree/solution.cpp",
+          "runtime": "10 ms",
+          "runtimePct": 99.7324,
+          "submissionId": 1430292268,
+          "timestamp": 1729592800
+        }
+      },
+      "title": "Kth Largest Sum in a Binary Tree"
+    },
+    "linked-list-cycle": {
+      "difficulty": "Easy",
+      "id": "141",
+      "slug": "linked-list-cycle",
+      "solutions": {
+        "c": {
+          "lang": "c",
+          "langName": "C",
+          "memory": "11.3 MB",
+          "memoryPct": 99.969,
+          "path": "easy/0141-linked-list-cycle/solution.c",
+          "runtime": "7 ms",
+          "runtimePct": 91.3494,
+          "submissionId": 1557243917,
+          "timestamp": 1740668848
+        }
+      },
+      "title": "Linked List Cycle"
+    },
+    "merge-two-sorted-lists": {
+      "difficulty": "Easy",
+      "id": "21",
+      "slug": "merge-two-sorted-lists",
+      "solutions": {
+        "csharp": {
+          "lang": "csharp",
+          "langName": "C#",
+          "memory": "43.9 MB",
+          "memoryPct": 7.442599999999984,
+          "path": "easy/0021-merge-two-sorted-lists/Solution.cs",
+          "runtime": "10 ms",
+          "runtimePct": 2.3367000000000053,
+          "submissionId": 1845356877,
+          "timestamp": 1764704528
+        }
+      },
+      "title": "Merge Two Sorted Lists"
+    },
+    "minimum-operations-to-sort-a-string": {
+      "difficulty": "Medium",
+      "id": "3863",
+      "slug": "minimum-operations-to-sort-a-string",
+      "solutions": {
+        "java": {
+          "lang": "java",
+          "langName": "Java",
+          "memory": "47.1 MB",
+          "memoryPct": 98.4848,
+          "path": "medium/3863-minimum-operations-to-sort-a-string/Solution.java",
+          "runtime": "25 ms",
+          "runtimePct": 80.30260000000004,
+          "submissionId": 2177758908,
+          "timestamp": 1792570960
+        }
+      },
+      "title": "Minimum Operations to Sort a String"
+    },
+    "number-complement": {
+      "difficulty": "Easy",
+      "id": "476",
+      "slug": "number-complement",
+      "solutions": {
+        "cpp": {
+          "lang": "cpp",
+          "langName": "C++",
+          "memory": "7.3 MB",
+          "memoryPct": 100.0,
+          "path": "easy/0476-number-complement/solution.cpp",
+          "runtime": "0 ms",
+          "runtimePct": 100.0,
+          "submissionId": 1364650586,
+          "timestamp": 1724332979
+        }
+      },
+      "title": "Number Complement"
+    },
+    "remove-nth-node-from-end-of-list": {
+      "difficulty": "Medium",
+      "id": "19",
+      "slug": "remove-nth-node-from-end-of-list",
+      "solutions": {
+        "csharp": {
+          "lang": "csharp",
+          "langName": "C#",
+          "memory": "42.6 MB",
+          "memoryPct": 6.394500000000005,
+          "path": "medium/0019-remove-nth-node-from-end-of-list/Solution.cs",
+          "runtime": "1 ms",
+          "runtimePct": 3.2860000000000014,
+          "submissionId": 1845350677,
+          "timestamp": 1764703880
+        }
+      },
+      "title": "Remove Nth Node From End of List"
+    }
+  }
+}
