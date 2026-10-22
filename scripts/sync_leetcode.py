@@ -101,9 +101,9 @@ My [LeetCode](https://leetcode.com) solutions, synced automatically via GitHub A
 
 
 class LeetCodeClient:
-    def __init__(self, session: str, csrf: str):
+    def __init__(self, session: str):
         self.headers = {
-            "Cookie": f"LEETCODE_SESSION={session};",
+            "Cookie": f"LEETCODE_SESSION={session}",
             "Referer": BASE_URL,
             "Origin": BASE_URL,
             "Content-Type": "application/json",
@@ -380,7 +380,7 @@ def main() -> None:
     if not session:
         sys.exit("Set the LEETCODE_SESSION environment variable (or create a .env file).")
 
-    client = LeetCodeClient(session, csrf)
+    client = LeetCodeClient(session)
     state = load_state()
     full_sync = os.environ.get("LEETCODE_FULL_SYNC") == "1"
     since = 0 if full_sync else int(state.get("lastTimestamp", 0))
