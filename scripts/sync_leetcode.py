@@ -9,7 +9,6 @@ then regenerates the README.md sections (recent solutions + Easy / Medium / Hard
 
 Required environment variables (or a .env file in the repo root):
     LEETCODE_SESSION     - LEETCODE_SESSION cookie from the browser
-    LEETCODE_CSRF_TOKEN  - csrftoken cookie from the browser
 
 Optional:
     LEETCODE_FULL_SYNC=1 - ignore saved state and walk the entire submission history
@@ -104,8 +103,7 @@ My [LeetCode](https://leetcode.com) solutions, synced automatically via GitHub A
 class LeetCodeClient:
     def __init__(self, session: str, csrf: str):
         self.headers = {
-            "Cookie": f"LEETCODE_SESSION={session}; csrftoken={csrf}",
-            "x-csrftoken": csrf,
+            "Cookie": f"LEETCODE_SESSION={session};",
             "Referer": BASE_URL,
             "Origin": BASE_URL,
             "Content-Type": "application/json",
@@ -124,7 +122,7 @@ class LeetCodeClient:
                 if e.code in (401, 403):
                     sys.exit(
                         f"Authorization error ({e.code}) for {url}. "
-                        "The LEETCODE_SESSION / csrftoken cookie has probably expired - update the secrets."
+                        " The LEETCODE_SESSION cookie has probably expired - update the secret."
                     )
                 if e.code in (429, 500, 502, 503, 504) and attempt < retries - 1:
                     wait = 5 * (attempt + 1)
@@ -379,9 +377,8 @@ def main() -> None:
         sys.stdout.reconfigure(encoding="utf-8")
     load_dotenv(ROOT / ".env")
     session = os.environ.get("LEETCODE_SESSION")
-    csrf = os.environ.get("LEETCODE_CSRF_TOKEN")
-    if not session or not csrf:
-        sys.exit("Set the LEETCODE_SESSION and LEETCODE_CSRF_TOKEN environment variables (or create a .env file).")
+    if not session:
+        sys.exit("Set the LEETCODE_SESSION environment variable (or create a .env file).")
 
     client = LeetCodeClient(session, csrf)
     state = load_state()

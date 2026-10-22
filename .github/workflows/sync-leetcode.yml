@@ -30,7 +30,6 @@ jobs:
       - name: Sync submissions
         env:
           LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
-          LEETCODE_CSRF_TOKEN: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           LEETCODE_FULL_SYNC: ${{ inputs.full_sync && '1' || '0' }}
         run: python scripts/sync_leetcode.py
 
