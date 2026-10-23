@@ -1,5 +1,5 @@
 {
-  "lastTimestamp": 1792570960,
+  "lastTimestamp": 1792682451,
   "problems": {
     "add-two-numbers": {
       "difficulty": "Medium",
@@ -133,6 +133,44 @@
         }
       },
       "title": "Remove Nth Node From End of List"
+    },
+    "subsets": {
+      "difficulty": "Medium",
+      "id": "78",
+      "slug": "subsets",
+      "solutions": {
+        "csharp": {
+          "lang": "csharp",
+          "langName": "C#",
+          "memory": "45.8 MB",
+          "memoryPct": 96.2049,
+          "path": "medium/0078-subsets/Solution.cs",
+          "runtime": "0 ms",
+          "runtimePct": 100.0,
+          "submissionId": 2178925838,
+          "timestamp": 1792682451
+        }
+      },
+      "title": "Subsets"
+    },
+    "two-sum": {
+      "difficulty": "Easy",
+      "id": "1",
+      "slug": "two-sum",
+      "solutions": {
+        "csharp": {
+          "lang": "csharp",
+          "langName": "C#",
+          "memory": "48.4 MB",
+          "memoryPct": 95.23060000000002,
+          "path": "easy/0001-two-sum/Solution.cs",
+          "runtime": "5 ms",
+          "runtimePct": 56.296499999999995,
+          "submissionId": 2178924921,
+          "timestamp": 1792682385
+        }
+      },
+      "title": "Two Sum"
     }
   }
 }
