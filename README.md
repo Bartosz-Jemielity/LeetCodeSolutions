@@ -7,7 +7,7 @@ My [LeetCode](https://leetcode.com) solutions, synced automatically via GitHub A
 |:---:|:---:|:---:|:---:|
 | 4 | 5 | 0 | 9 |
 
-_Last sync: 2026-10-23 08:24 UTC_
+_Last sync: 2026-10-24 08:00 UTC_
 <!-- LEETCODE:STATS:END -->
 
 ## Recent solutions
