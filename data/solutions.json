@@ -1,5 +1,5 @@
 {
-  "lastTimestamp": 1792682451,
+  "lastTimestamp": 1793107657,
   "problems": {
     "add-two-numbers": {
       "difficulty": "Medium",
@@ -57,6 +57,25 @@
         }
       },
       "title": "Linked List Cycle"
+    },
+    "longest-palindromic-substring": {
+      "difficulty": "Medium",
+      "id": "5",
+      "slug": "longest-palindromic-substring",
+      "solutions": {
+        "java": {
+          "lang": "java",
+          "langName": "Java",
+          "memory": "44.8 MB",
+          "memoryPct": 44.64980000000001,
+          "path": "medium/0005-longest-palindromic-substring/Solution.java",
+          "runtime": "27 ms",
+          "runtimePct": 29.680799999999998,
+          "submissionId": 2183102054,
+          "timestamp": 1793107657
+        }
+      },
+      "title": "Longest Palindromic Substring"
     },
     "merge-two-sorted-lists": {
       "difficulty": "Easy",
